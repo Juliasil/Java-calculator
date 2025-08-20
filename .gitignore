@@ -1,0 +1,5 @@
+# Pasta de build do Maven
+/target/
+
+# Configurações do VS Code
+.vscode/
