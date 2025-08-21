@@ -2,6 +2,7 @@ package dev.aguil;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class CalculatorTest {
@@ -34,6 +35,11 @@ public class CalculatorTest {
         assertEquals(4, Calculator.Divide(8,2));
         assertEquals(5, Calculator.Divide(10,2));
         
+    }
+
+    @Test
+    void shouldThrowExceptionWhenDivideToZero() {
+        assertThrows(ArithmeticException.class, () -> Calculator.Divide(10, 0));
     }
     
 }

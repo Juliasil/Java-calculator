@@ -16,6 +16,9 @@ public class Calculator {
     }
 
     static int Divide(int number1, int number2) {
+        if(number2 == 0) {
+            throw new ArithmeticException("Division by Zero not allowed.");
+        }
         return number1 / number2;
     }
 }
